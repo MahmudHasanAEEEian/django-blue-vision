@@ -1,11 +1,13 @@
 {% load static %}
-<!doctype html>
+<!-- base.html -->
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="{% static 'BlueVision_app/libs/glightbox/dist/css/glightbox.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'BlueVision_app/libs/swiper/swiper-bundle.min.css' %}" />
     <!-- Favicon icon-->
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'BlueVision_app/images/favicon/apple-touch-icon.png' %}" />
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'BlueVision_app/images/favicon/favicon-32x32.png' %}" />
@@ -58,11 +60,9 @@
         })(window, document, "clarity", "script", "kss8za9j58");
     </script>
 
-    <title>Blue Vision | License</title>
+    <title>{% block title %} Blue Vision {% endblock %}</title>
 </head>
-
 <body>
-<!-- Navbar -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-light w-100">
             <div class="container px-3">
@@ -222,190 +222,14 @@
             </div>
         </nav>
     </header>
-
+    
+    
     <main>
-        <!--Square Pattern Start-->
-        <div class="pattern-square"></div>
-        <!--Square Pattern End-->
-
-        <!--Pageheader start-->
-        <section class="py-5 py-lg-8">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-12">
-                        <div class="text-center">
-                            <h1 class="mb-3">Licenses Achieved</h1>
-                            <p class="mb-0">Explore our Licenses achieved to gain insights about ourselves.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--Pageheader end-->
-
-        <!--License start-->
-        <section class="mb-xl-9 my-4">
-            <div class="container">
-                <div class="row g-5">
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="card border-0 h-100 card-lift">
-                            <a href="#!"><img src="{% static 'BlueVision_app/images/landings/it-company/it-company-case-study-1.jpg' %}" alt="about" class="img-fluid rounded-top-3" /></a>
-                            <div class="card-body">
-                                <div class="d-flex flex-column gap-2">
-                                    <div>
-                                        <img src="{% static 'BlueVision_app/images/landings/it-company/casestudy-logo-1.svg' %}" alt="case-study" />
-                                    </div>
-                                    <div class="d-flex flex-column gap-4">
-                                        <h4><a href="#!" class="text-reset">Revolutionizing Healthcare Delivery</a></h4>
-                                        <a href="#!" class="icon-link icon-link-hover">
-                                    Read Case Study
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                       <path
-                                          fill-rule="evenodd"
-                                          d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-                                    </svg>
-                                 </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="card border-0 h-100 card-lift">
-                            <a href="#!"><img src="{% static 'BlueVision_app/images/landings/it-company/it-company-case-study-2.jpg' %}" alt="about" class="img-fluid rounded-top-3" /></a>
-                            <div class="card-body">
-                                <div class="d-flex flex-column gap-2">
-                                    <div>
-                                        <img src="{% static 'BlueVision_app/images/landings/it-company/casestudy-logo-2.svg' %}" alt="case-study" />
-                                    </div>
-                                    <div class="d-flex flex-column gap-4">
-                                        <h4><a href="#!" class="text-reset">Financial Institution Fin-tech Success Story</a></h4>
-
-                                        <a href="#!" class="icon-link icon-link-hover">
-                                    Read Case Study
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                       <path
-                                          fill-rule="evenodd"
-                                          d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-                                    </svg>
-                                 </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="card border-0 h-100 card-lift">
-                            <a href="#!"><img src="{% static 'BlueVision_app/images/landings/it-company/it-company-case-study-3.jpg' %}" alt="about" class="img-fluid rounded-top-3" /></a>
-                            <div class="card-body">
-                                <div class="d-flex flex-column gap-2">
-                                    <div>
-                                        <img src="{% static 'BlueVision_app/images/landings/it-company/casestudy-logo-3.svg' %}" alt="case-study" />
-                                    </div>
-                                    <div class="d-flex flex-column gap-4">
-                                        <h4><a href="#!" class="text-reset">Digital Educational Learning Innovation</a></h4>
-
-                                        <a href="#!" class="icon-link icon-link-hover">
-                                    Read Case Study
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                       <path
-                                          fill-rule="evenodd"
-                                          d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-                                    </svg>
-                                 </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="card border-0 h-100 card-lift">
-                            <a href="#!"><img src="{% static 'BlueVision_app/images/landings/it-company/it-company-case-study-4.jpg' %}" alt="about" class="img-fluid rounded-top-3" /></a>
-                            <div class="card-body">
-                                <div class="d-flex flex-column gap-2">
-                                    <div>
-                                        <img src="{% static 'BlueVision_app/images/landings/it-company/casestudy-logo-4.svg' %}" alt="case-study" />
-                                    </div>
-                                    <div class="d-flex flex-column gap-4">
-                                        <h4><a href="#!" class="text-reset">Revolutionizing Efficiency: How Codescandy Enhanced Operations for Client</a></h4>
-
-                                        <a href="#!" class="icon-link icon-link-hover">
-                                    Read Case Study
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                       <path
-                                          fill-rule="evenodd"
-                                          d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-                                    </svg>
-                                 </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="card border-0 h-100 card-lift">
-                            <a href="#!"><img src="{% static 'BlueVision_app/images/landings/it-company/it-company-case-study-5.jpg' %}" alt="about" class="img-fluid rounded-top-3" /></a>
-                            <div class="card-body">
-                                <div class="d-flex flex-column gap-2">
-                                    <div>
-                                        <img src="{% static 'BlueVision_app/images/landings/it-company/casestudy-logo-5.svg' %}" alt="case-study" />
-                                    </div>
-                                    <div class="d-flex flex-column gap-4">
-                                        <h4><a href="#!" class="text-reset">From Challenge to Triumph: The [Client Name] Success Story</a></h4>
-
-                                        <a href="#!" class="icon-link icon-link-hover">
-                                    Read Case Study
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                       <path
-                                          fill-rule="evenodd"
-                                          d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-                                    </svg>
-                                 </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <div class="card border-0 h-100 card-lift">
-                            <a href="#!"><img src="{% static 'BlueVision_app/images/landings/it-company/it-company-case-study-6.jpg' %}" alt="about" class="img-fluid rounded-top-3" /></a>
-                            <div class="card-body">
-                                <div class="d-flex flex-column gap-2">
-                                    <div>
-                                        <img src="{% static 'BlueVision_app/images/landings/it-company/casestudy-logo-6.svg' %}" alt="case-study" />
-                                    </div>
-                                    <div class="d-flex flex-column gap-4">
-                                        <h4><a href="#!" class="text-reset">A Deep Dive into [Client Name]'s Digital Transformation Journey</a></h4>
-
-                                        <a href="#!" class="icon-link icon-link-hover">
-                                    Read Case Study
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
-                                       <path
-                                          fill-rule="evenodd"
-                                          d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
-                                    </svg>
-                                 </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12">
-                        <div class="mt-xl-7 mt-3">
-                            <a class="btn btn-outline-primary" href="#!">
-                           <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                           <span class="ms-2">Load More</span>
-                        </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--career study end-->
+        {% block content %}
+        <!-- Default content -->
+        {% endblock %}
     </main>
+
     <!-- Footer -->
     <footer class="pt-7">
         <div class="container">
@@ -595,19 +419,6 @@
             </div>
         </div>
     </footer>
-    <!-- Scroll top -->
-    <div class="btn-scroll-top">
-        <svg class="progress-square svg-content" width="100%" height="100%" viewBox="0 0 40 40">
-            <path d="M8 1H32C35.866 1 39 4.13401 39 8V32C39 35.866 35.866 39 32 39H8C4.13401 39 1 35.866 1 32V8C1 4.13401 4.13401 1 8 1Z" />
-         </svg>
-    </div>
-    <!-- Libs JS -->
-    <script src="{% static 'BlueVision_app/libs/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
-    <script src="{% static 'BlueVision_app/libs/simplebar/dist/simplebar.min.js' %}"></script>
-    <script src="{% static 'BlueVision_app/libs/headhesive/dist/headhesive.min.js' %}"></script>
 
-    <!-- Theme JS -->
-    <script src="{% static 'BlueVision_app/js/theme.min.js' %}"></script>
 </body>
-
 </html>
