@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block title %}Login - Blue Vision{% endblock %}
+
+{% block content %}
+<!-- Page Title -->
+<section class="pt-7 pb-6">
+    <div class="container">
+        <h1 class="text-center">Login</h1>
+    </div>
+</section>
+
+<!-- Login Form -->
+<section class="pt-5 pb-7">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8 col-12">
+                <div class="card border-light shadow-sm rounded-3">
+                    <div class="card-body p-5">
+                        <h4 class="card-title mb-4">Sign In</h4>
+                        <form method="post" action="{% url 'BlueVisionWeb_app:login' %}">
+                            {% csrf_token %}
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Username</label>
+                                <input type="text" class="form-control" id="username" name="username" required autofocus>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Log In</button>
+                        </form>
+                        {% if form.non_field_errors %}
+                            <div class="alert alert-danger mt-3">
+                                {{ form.non_field_errors }}
+                            </div>
+                        {% endif %}
+                        {% if messages %}
+                            <div class="alert alert-info mt-3">
+                                {% for message in messages %}
+                                    {{ message }}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

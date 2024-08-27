@@ -40,6 +40,22 @@ INSTALLED_APPS = [
     'BlueVisionWeb_app'
 ]
 
+# self-made settings start
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',  # Default backend
+]
+
+# Session settings
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'  # Store session data in the database
+SESSION_COOKIE_NAME = 'sessionid'  # Default cookie name
+SESSION_COOKIE_AGE = 1209600  # Two weeks in seconds
+SESSION_COOKIE_SECURE = False  # True if using HTTPS
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False  # Keep session until cookie expires
+# self-made settings end
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -70,7 +86,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'BlueVisionWeb.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
@@ -80,7 +95,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -99,7 +113,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/

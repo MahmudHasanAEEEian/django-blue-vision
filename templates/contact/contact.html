@@ -27,45 +27,46 @@
                         <div class="col-md-7 col-12">
                             <div class="card shadow-sm">
                                 <div class="card-body">
-                                    <form class="row g-3 needs-validation" novalidate>
+                                    <form method="post" action="{% url 'BlueVisionWeb_app:send_message' %}" class="row g-3 needs-validation" novalidate>
+                                        {% csrf_token %}
                                         <div class="col-lg-6 col-md-12">
                                             <label for="contactFirstNameInput" class="form-label">
-                                        First Name
-                                        <span class="text-danger">*</span>
-                                    </label>
-                                            <input type="text" class="form-control" id="contactFirstNameInput" required />
-                                            <div class="invalid-feedback">Please enter firstname.</div>
+                                                First Name
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <input type="text" class="form-control" id="contactFirstNameInput" name="first_name" required />
+                                            <div class="invalid-feedback">Please enter your first name.</div>
                                         </div>
                                         <div class="col-lg-6 col-md-12">
                                             <label for="contactLastNameInput" class="form-label">
-                                        Last Name
-                                        <span class="text-danger">*</span>
-                                    </label>
-                                            <input type="text" class="form-control" id="contactLastNameInput" required />
-                                            <div class="invalid-feedback">Please enter lastname.</div>
+                                                Last Name
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <input type="text" class="form-control" id="contactLastNameInput" name="last_name" required />
+                                            <div class="invalid-feedback">Please enter your last name.</div>
                                         </div>
                                         <div class="col-md-12">
                                             <label for="contactEmailInput" class="form-label">
-                                        Email
-                                        <span class="text-danger">*</span>
-                                    </label>
-                                            <input type="email" class="form-control" id="contactEmailInput" required />
-                                            <div class="invalid-feedback">Please enter email.</div>
+                                                Email
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <input type="email" class="form-control" id="contactEmailInput" name="email" required />
+                                            <div class="invalid-feedback">Please enter your email.</div>
                                         </div>
                                         <div class="col-md-12">
                                             <label for="contactCompanyNameInput" class="form-label">Company Name</label>
-                                            <input type="text" class="form-control" id="contactCompanyNameInput" required />
-                                            <div class="invalid-feedback">Please enter company name.</div>
+                                            <input type="text" class="form-control" id="contactCompanyNameInput" name="company_name" />
+                                            <div class="invalid-feedback">Please enter your company name.</div>
                                         </div>
                                         <div class="col-md-12">
                                             <label for="contactPhoneInput" class="form-label">Phone</label>
-                                            <input type="tel" class="form-control" id="contactPhoneInput" required />
-                                            <div class="invalid-feedback">Please enter phone.</div>
+                                            <input type="tel" class="form-control" id="contactPhoneInput" name="phone" />
+                                            <div class="invalid-feedback">Please enter your phone number.</div>
                                         </div>
                                         <div class="col-md-12">
                                             <label for="contactTextarea" class="form-label">Message</label>
-                                            <textarea class="form-control" id="contactTextarea" placeholder="Write to us" rows="4" required></textarea>
-                                            <div class="invalid-feedback">Please enter a message.</div>
+                                            <textarea class="form-control" id="contactTextarea" name="message" placeholder="Write to us" rows="4" required></textarea>
+                                            <div class="invalid-feedback">Please enter your message.</div>
                                         </div>
                                         <div class="d-grid">
                                             <button class="btn btn-primary" type="submit">Send</button>
@@ -115,5 +116,21 @@
         </div>
     </section>
     <!--Contact us end-->
-    
+
+    <!--stuff use only start-->
+    <section class="mb-xl-9 my-5">
+        <div class="container center">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1 col-md-12 col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">For Stuff Use Only</h5>
+                            <a href="{% url 'BlueVisionWeb_app:login' %}" class="btn btn-primary">See the Database</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--stuff use only end-->
 {% endblock %}
